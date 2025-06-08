@@ -93,3 +93,19 @@ classDiagram
   CadastroAbrigo "1" --> "*" CadastroUsuario : usuarios
   CadastroAbrigo "1" --> "*" AbrigoOcupacao : ocupacoes
   CadastroAbrigo "1" --> "*" EstoqueAbrigo : estoques
+
+###📚 Acesso e Documentação
+  - Após rodar o projeto com dotnet run, a aplicação estará disponível em:
+    - http://localhost:5042/swagger/index.html
+
+###📥 Exemplos de Requisições
+curl -X POST https://localhost:5001/api/abrigos \
+-H "Content-Type: application/json" \
+-d '{
+  "nomeAbrigo": "Abrigo Central",
+  "capacidadePessoa": 200,
+  "nomeResponsavel": "Maria Oliveira",
+  "longitude": "-46.57421",
+  "latitude": "-23.55052"
+}'
+
